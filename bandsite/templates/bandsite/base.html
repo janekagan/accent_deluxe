@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>accent deluxe</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'bandsite/final.css' %}" />
+        <meta name="ROBOTS" content="NOINDEX, NOFOLLOW"/>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <div id="logo"><img width="240px" height="210px" src="{% static 'bandsite/images/logo2.png' %}" alt="logo" /></div>
+            </div>
+            <div id="left">
+                <div id="nav">
+                    <a href="{% url 'index' %}">Home</a>
+                    <a href="{% url 'about' %}">About Us</a>
+                    <a href="{% url 'index' %}">Videos</a>
+                    <a href="{% url 'index' %}">Photos</a>
+                    <a href="{% url 'contact' %}">Contact Us</a>
+                </div>
+                <div id="links">
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+            <div id="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+        </div>
+            <div id="footer">&copy;2017 Accent Deluxe<br /></div>
+        </div>
+    </body>
+</html>
